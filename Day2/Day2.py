@@ -1,4 +1,4 @@
-"""This is the Advent of Code Day 1 challenge."""
+"""This is the Advent of Code Day 2 challenge."""
 
 import itertools
 
@@ -12,6 +12,6 @@ for combo in itertools.combinations(numberList, 3):
     winners = sum(list(combo))
     # If tuple equals the 2020, multiply the elements for the answer, if not, pass
     if winners == 2020:
-        print(combo[0]* combo[1]* combo[2])
+        print(combo[0]* combo[1])
     else:
         pass
