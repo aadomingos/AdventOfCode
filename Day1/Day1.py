@@ -3,7 +3,7 @@
 import itertools
 
 # Read file into a list of integers
-with open("/Users/AADAir/GitHub/AdventOfCode/Day1.txt", "r") as f:
+with open("/Users/AADAir/GitHub/AdventOfCode//Day1/Day1.txt", "r") as f:
     numberList = [int(number) for number in f]
 
 # Use itertools to get all the unique two digit combinations in the list
