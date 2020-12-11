@@ -3,9 +3,9 @@
 with open("/Users/AADAir/GitHub/AdventOfCode/Day2/Day2.txt", "r") as f:
     passwordList = f.read().splitlines()
 
-def policy_checker(strings, letter, minFreq, maxFreq):
-    freq = strings.count(letter)
-    if int(minFreq) <= int(freq) <= int(maxFreq):
+def policy_checker(strings, letter, pos1, pos2):
+    if (strings[int(pos1)] == letter or strings[int(pos2)] == letter)\
+         and not (strings[int(pos1)] == letter and strings[int(pos2)] == letter):
         return True
     else:
         return False
@@ -25,8 +25,8 @@ def entry_splitter(entry, firstSplitter, secondSplitter, thirdSplitter):
 
 i = 0
 for password in passwordList:
-    p, l, minF, maxF = entry_splitter(password, ":", " ", "-")
-    result = policy_checker(p, l, minF, maxF)
+    p, l, pos1, pos2 = entry_splitter(password, ":", " ", "-")
+    result = policy_checker(p, l, pos1, pos2)
     if result is True:
         i+=1
     else:
