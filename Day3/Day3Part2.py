@@ -3,7 +3,7 @@ import numpy as np
 with open("/Users/AADAir/GitHub/AdventOfCode/Day3/Day3.txt", "r") as f:
     treeMap = f.read().splitlines()
 
-# this might be more efficient that a huge for-loop    
+
 def treeCounter(listMap, slope):
     # set variables to start
     trackWidth = len(listMap[0])
@@ -24,7 +24,7 @@ def treeCounter(listMap, slope):
 
 
 # new set of slope variable
-slopes = [(1,1), (3,1), (5,1), (7,1), (1,2)]
+slopes = [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]
 
 totalCounts = []
 # iterate over each set of slopes
